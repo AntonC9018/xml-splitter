@@ -1,0 +1,43 @@
+.foldername, .toolbox .filename {
+  font-style: italic;
+}
+.popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+}
+
+.popup * {
+   word-wrap: none;
+}
+
+.toolbox {
+  width: 100%;
+  /* cursor: default; */
+}
+
+.ui-draggable.ui-draggable-dragging .card-title {
+  cursor: grabbing;
+}
+.ui-draggable .card-title {
+  cursor: grab;
+}
+.noUiSlider {
+  margin-top: 5px;
+}
+.noUi-tooltip {
+    display: none;
+}
+.noUi-active .noUi-tooltip {
+    display: block;
+}
+ul {
+  cursor: pointer;
+}
+
+#messages-slider, #size-slider, #split-slider, #messages-value, #size-value, #split-value{
+  display: none
+}
