@@ -8,10 +8,11 @@
   left: 0;
   width: 400px;
   height: 400px;
+  z-index: 2;
 }
 
 .popup * {
-   word-wrap: none;
+   word-wrap: none;   
 }
 
 .toolbox {
