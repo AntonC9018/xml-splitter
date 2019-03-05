@@ -30,7 +30,6 @@ app.once('ready', () => {
   // Show window when page is ready
   window.once('ready-to-show', () => {
     window.show()
-
   })
 })
 
@@ -56,9 +55,13 @@ function createMenu() {
           label: 'Select folder',
           click: openDirectory
         },
-        {
-          label: 'Preferences',
-        }
+        // {
+        //   label: 'Preferences',
+        // },
+        // {
+        //   label: 'dev',
+        //   click: () => window.webContents.openDevTools()
+        // }
       ]
     }
   ]
