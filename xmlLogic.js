@@ -24,8 +24,8 @@ function convert(path, { size, messages, split }) {
   const emitter = new EventEmitter();
 
   console.log(emitter);
-
-  const folderName = Path.basename(path, '.XML');
+  let _f = Path.basename(path);
+  const folderName = _f.slice(0, _f.length - 4);
   const dirname = Path.dirname(path);
   const outputFolder = dirname + '/' + folderName;
 

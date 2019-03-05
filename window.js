@@ -55,7 +55,7 @@ var sliderOptions = {
     tooltips: [true],
     range: {
       'min': [1],
-      'max': [1500]
+      'max': [1200]
     }
   }
 }
@@ -127,7 +127,7 @@ function reset() {
 
     // split files in 2 categories
     for (let i = 0; i < files.length; i++) {
-      if (files[i].endsWith('.XML')) documents.push(files[i]);
+      if ( /(\.xml)$/i.test(files[i]) ) documents.push(files[i]);
       else folders.push(files[i]);
     }
 

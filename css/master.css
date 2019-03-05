@@ -12,7 +12,7 @@
 }
 
 .popup * {
-   word-wrap: none;   
+   word-wrap: none;
 }
 
 .toolbox {
@@ -27,7 +27,7 @@
   cursor: grab;
 }
 .noUiSlider {
-  margin-top: 5px;
+  margin-top: 8px;
 }
 .noUi-tooltip {
     display: none;

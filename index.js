@@ -43,10 +43,10 @@ function createMenu() {
           click: () => dialog.showOpenDialog(window, {
             properties: ['openFile']
           }, filePaths => {
-            if ( filePaths[0].endsWith('.XML') ) {
-              const dirname = Path.dirname(filePaths[0]);
+            if ( /(\.xml)$/i.test(filePaths[0]) ) {
+              const dirname = path.dirname(filePaths[0]);
               window.webContents.send('path:set', dirname);
-              const filename = Path.basename(filePaths[0]);
+              const filename = path.basename(filePaths[0]);
               window.webContents.send('file:set', filename)
             }
           })
@@ -58,6 +58,9 @@ function createMenu() {
         // {
         //   label: 'Preferences',
         // },
+        {
+          role: 'reload'
+        },
         // {
         //   label: 'dev',
         //   click: () => window.webContents.openDevTools()
@@ -70,9 +73,7 @@ function createMenu() {
   Menu.setApplicationMenu(menu);
 }
 
-ipcMain.on('dialog', (event) => {
-  openDirectory()
-})
+ipcMain.on('dialog', openDirectory);
 
 function openDirectory() {
   dialog.showOpenDialog(window, {
